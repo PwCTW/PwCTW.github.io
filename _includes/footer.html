@@ -1,0 +1,15 @@
+<footer class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% if site.email %}
+                <a href="mailto:{{ site.email }}">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    {{ site.email }}
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>

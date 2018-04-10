@@ -1,0 +1,38 @@
+--- 
+layout: default 
+---
+
+<div id="index" class="row">
+    <div class="{{ site.post_item_width }}">
+        <div class="pwctw-post-list-header">
+            Posts
+        </div>
+        <div class="pwctw-post-list-body">
+            <div post-cate="All">
+                {% for post in site.posts %}
+                <a class="pwctw-post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+                    <h2>
+                        {{ post.title }}
+                    </h2>
+                    <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+                </a>
+                {% endfor %}
+            </div>
+            <!-- <div class="posts-in-categories"> -->
+            {% for category in site.categories %}
+            <div post-cate="{{category | first}}">
+                {% for posts in category %} {% for post in posts %} {% if post.url %}
+                <a href="{{ post.url }}" class="pwctw-post-list-item">
+                    <h2>
+                        {{ post.title }}
+                    </h2>
+                    <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+                </a>
+                {% endif %} {% endfor %} {% endfor %}
+            </div>
+            {% endfor %}
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+</div>

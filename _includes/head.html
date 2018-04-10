@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <title>
+        {% if page.title %}
+            {{ page.title }} 
+        {% else %} 
+            {{ site.title }} 
+        {% endif %}
+    </title>
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap-3.3.0 -->
+	<link rel="stylesheet" type="text/css" href="{{ " /bootstrap/3.3.0/css/bootstrap.css " | prepend: site.baseurl }}">
+	<script type="text/javascript" src="{{" /bootstrap/3.3.0/js/bootstrap.min.js " | prepend: site.baseurl}}"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" type="text/css" href="{{ " /custom/common.css " | prepend: site.baseurl }}">
+    <script type="text/javascript" src="{{" /custom/common.js " | prepend: site.baseurl}}"></script>
+</head>
